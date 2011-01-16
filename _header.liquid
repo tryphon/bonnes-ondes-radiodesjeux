@@ -1,0 +1,13 @@
+
+      <div id="header">
+        <h1 onclick="document.location  = '{{show.url_for}}'">{{show.name}}</h1>
+        <span class="headline">
+          Dernier épisode<br/>
+          {% for episode in show.episodes limit: 1 %}
+          <a href="{{ episode.url_for }}">
+            <strong>{{episode.title}}</strong>
+            <span class="date">le {{episode.broadcasted_at | date: '%d/%m'}}</span>
+          </a>
+          {% endfor %}
+        </span>
+      </div>

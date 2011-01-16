@@ -1,0 +1,40 @@
+        <h2>Podcast</h2>
+
+        <div class="podcast">
+          <p>
+            Adresse du podcast : <input size="{{show.url_for_podcast | size}}" value="{{show.url_for_podcast}}" type="text" readonly="true"/> 
+          </p>
+      
+          <p>
+            <a href="{{show.itpc_url_for_podcast}}" title="Ajouter cd podcast dans votre iTunes">iTunes</a> 
+            | <a href="{{show.url_for_podcast}}" title="Voir le feed RSS">RSS</a> 
+            | {{show.clippy_for_podcast}}
+          </p>
+        </div>
+
+        <h2>Retrouvez nous via</h2>
+
+        <ul class="social-medias">
+          <li class="itunes"><a href="http://itunes.apple.com/podcast/la-radio-des-jeux/id343200920">iTunes</a></li>
+          <li class="facebook"><a href="http://www.facebook.com/pages/La-Radio-des-Jeux/183265270527">FaceBook</a></li>
+          <li class="rss"><a href="{{show.url_for_podcast}}">Feed RSS</a></li>
+        </ul>
+
+        <h2>Don</h2>
+
+        <form method="post" name="paypal" action="https://www.paypal.com/cgi-bin/webscr">
+          <input type="hidden" value="_s-xclick" name="cmd"/>
+          <input type="hidden" value="RRZK4G6M84NRC" name="hosted_button_id"/>
+          <a href="#" onclick="document.paypal.submit();">Faire un don à la Radio des Jeux</a>
+        </form>
+
+        <h2>Saison 1</h2>
+
+        <ul>
+          {% for episode in show.tag.saison-1 reversed %}
+          <li>
+            <a href="{{episode.url_for}}">{{episode.title}}</a>
+            ({{episode.broadcasted_at | date: '%m/%Y'}})
+          </li>
+          {% endfor %}
+        </ul>

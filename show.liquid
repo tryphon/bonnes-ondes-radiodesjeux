@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    {% include 'radio_des_jeux/head' %}
+    <title>{{show.name}} - Bonnes Ondes</title>
+  </head>
+
+  <body class="show">
+    <div id="page">
+      {% include 'radio_des_jeux/header' %}
+
+      <div id="content">
+        <div class="description">
+          {{show.description | textilize}}
+        </div>
+
+        <ul class="episodes">
+          {% for episode in show.broadcasted_episodes limit: 10 %}
+          <li>
+            <h3><a href="{{episode.url_for}}">{{episode.title}}</a></h3>
+            {{ episode.image.tag_for_thumb }}
+            {{ episode.description|textilize|strip_tags|truncate:340 }}
+
+            {% if episode.broadcasted_at %}
+            <span class="broadcast_date">diffusé {{episode.broadcasted_at | date: 'le %d/%m/%Y'}}</span>
+            {% endif %}
+
+            <a class="button" href="{{episode.url_for}}">Ecoutez {{episode.title|truncate:30}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div id="sidebar">
+        {% include 'radio_des_jeux/sidebar' %}
+      </div>
+
+      {% include 'radio_des_jeux/footer' %}
+    </div>
+  </body>
+</html>

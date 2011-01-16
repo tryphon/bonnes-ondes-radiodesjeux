@@ -1,0 +1,217 @@
+@import 'reset.css';
+
+body {
+    font:13px Verdana;
+    color: black;
+    background-color: #eee;
+}
+
+#page {
+    margin: 0 auto;
+    width:998px;
+    background: url('../images/wrapper.gif') repeat-y 0 0;
+}
+
+#header {
+    position: relative;
+    padding:12px 30px;
+    width:938px;
+}
+
+h1 {
+    background: #000 url('../images/radio-des-jeux.jpg') no-repeat 0 0;
+    display: block;
+    height: 304px;
+    text-indent: -999px;
+    cursor: pointer;
+}
+
+#header .headline {
+    position: absolute;
+    top: 100px;
+    right: 150px;
+    width: 300px;
+    text-align: right;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#header .headline strong {
+    font-size: 1.2em;
+    color: #fcc200;
+    font-weight: bold;
+}
+
+#header .headline .date {
+    color: white;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 0.8em;
+}
+
+#content, #sidebar {
+    border:1px solid #ddd;
+    float: left;
+    padding: 12px;
+}
+
+#content {
+    width: 620px;
+    margin-left: 30px;
+    min-height: 50em;
+}
+
+#sidebar {
+    width:252px;
+    margin-left: 14px;
+}
+
+#footer {
+    padding: 10px 0;
+    text-align: center;
+    clear: both;
+    color: #777;
+    font-size: 0.8em;
+}
+
+#footer a {
+    color: #777;
+    text-decoration: underline;
+}
+
+body.show div.description {
+    margin-bottom: 2em;
+}
+
+body.show ul.episodes li {
+    width: 298px;
+    height: 22em;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+body.show ul.episodes li img {
+    float: left;
+    margin-right: 10px;
+}
+
+body.show ul.episodes li h3 {
+    margin-bottom: 5px;
+    color: #87580A;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+body.show ul.episodes li h3 a {
+    text-decoration: none;
+}
+
+body.show ul.episodes li a {
+    text-decoration: none;
+    color: #87580A;
+}
+
+body.show ul.episodes li .broadcast_date {
+    color: #777;
+    position: absolute;
+    right: 0px;
+    bottom: 35px;
+    font-size: 0.8em;
+}
+
+body.show ul.episodes li .button {
+    position: absolute;
+    bottom: 0px;
+    width: 272px;
+}
+
+.button {
+    background: #eee url("../images/details.gif") repeat-x 0 0;
+    border: 1px solid #ddd;
+    display: block;
+    padding:7px 12px;
+    clear: both;
+}
+
+#sidebar h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#sidebar h2:first-child {
+    margin-top: 0;
+}
+
+#sidebar .podcast input {
+    font-size: 0.7em;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+#sidebar a {
+    color: #87580A;
+}
+
+#sidebar .podcast object {
+    margin-top: 5px;
+}
+
+#sidebar ul.social-medias li {
+  padding-left: 25px; 
+  line-height: 24px;
+}
+
+#sidebar ul.social-medias li.facebook {
+  background: transparent url('../images/facebook.png') no-repeat scroll center left;
+}
+
+#sidebar ul.social-medias li.rss {
+  background: transparent url('../images/rss.png') no-repeat scroll center left;
+}
+
+#sidebar ul.social-medias li.itunes {
+  background: transparent url('../images/itunes.png') no-repeat scroll center left;
+}
+
+body.episode #content h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #87580A;
+}
+
+body.episode #content .description img {
+  float: right;
+  margin-left: 12px;
+}
+
+body.episode #content .description p {
+  margin: 6px 0;
+}
+
+body.episode #content .description .content {
+  font-style: italic;
+  text-align: right;
+  font-size: 0.8em;
+}
+body.episode #content .description audio {
+  width: 200px;
+}
+
+body.episode #content .description a {
+  color: #87580A;
+  text-decoration: underline;
+}
+
+body.episode #content .description strong {
+  font-weight: bold;
+}
+
+#sidebar audio {
+  margin-top: 12px;
+  width: 253px;
+}

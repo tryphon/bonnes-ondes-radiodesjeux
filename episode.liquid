@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    {% include 'radio_des_jeux/head' %}
+    <title>{{ episode.title }} - {{show.name}} - Bonnes Ondes</title>
+  </head>
+
+  <body class="episode">
+    <div id="page">
+      {% include 'radio_des_jeux/header' %}
+
+      <div id="content">
+        <h2>{{episode.title}}</h2>
+        <div class="description">
+          {{ episode.image.tag }}
+          {{ episode.html_description }}
+        </div>
+      </div>
+
+      <div id="sidebar">
+        {% unless episode.principal_contents == empty %}
+        <h2>Ecouter l'émission</h2>
+
+     	  {% for content in episode.principal_contents %}
+	      <div class="audio">
+          {% if forloop.length > 1 %}
+          <p class="name">{{content.name}}</p>
+          {% endif %}
+
+          {{ content.audio_player }}
+
+          <a href="{{content.url_for_playlist}}">Ecouter</a> 
+          | Télécharger <a href="{{content.url_for_mp3}}">Mp3</a>
+          | <a href="{{content.url_for_ogg}}">Ogg</a>
+	      </div>
+        {% endfor %}
+        {% endunless %}
+
+        {% include 'radio_des_jeux/sidebar' %}
+      </div>
+
+      {% include 'radio_des_jeux/footer' %}
+    </div>
+    </body>
+</html>
