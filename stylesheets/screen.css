@@ -184,6 +184,11 @@ body.episode #content h2 {
   color: #87580A;
 }
 
+body.episode #content h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 body.episode #content .description img {
   float: right;
   margin-left: 12px;
