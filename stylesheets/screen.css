@@ -217,6 +217,7 @@ body.episode #content .description strong {
 }
 
 body.episode #content #disqus_thread {
+  marging-top: 15px;
   background-color: #eee;
   padding: 5px 10px 0 10px;
 }
