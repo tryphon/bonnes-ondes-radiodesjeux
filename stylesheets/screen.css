@@ -216,6 +216,11 @@ body.episode #content .description strong {
   font-weight: bold;
 }
 
+body.episode #content #disqus_thread {
+  background-color: #eee;
+  padding: 5px 10px 0 10px;
+}
+
 #sidebar audio {
   margin-top: 12px;
   width: 253px;
