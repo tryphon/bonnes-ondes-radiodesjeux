@@ -14,6 +14,21 @@
           {{show.description | textilize}}
         </div>
 
+        <iframe id="live" src="" width="600px" height="300px" scrolling="no" frameborder="0" style="display: none;"></iframe>
+
+        <script type="text/javascript">
+          function stream_status(status) {
+            if (status.up) {
+              $('live').src = "/direct";
+              $('live').show();
+            } else {
+              $('live').hide();
+              $('live').src = "";
+            }
+          }
+        </script>
+        <script type="text/javascript" src="https://console.tryphon.eu/streams/1/status.js?callback=stream_status&refresh=60" defer="true"></script>
+
         <ul class="episodes">
           {% for episode in show.broadcasted_episodes limit: 10 %}
           <li>

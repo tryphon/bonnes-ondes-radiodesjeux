@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    {% include 'radiodesjeux/head' %}
+    <title>{{show.name}} - En Direct - Bonnes Ondes</title>
+  </head>
+
+  <body class="stream">
+    <div class="live">
+      <script>
+        threeSixtyPlayer.config.autoPlay = true;
+        threeSixtyPlayer.config.showHMSTime = false;
+        threeSixtyPlayer.config.playRingColor = threeSixtyPlayer.config.loadRingColor;
+      </script>
+
+      <div class="ui360 ui360-vis"><a onclick="location.href = 'http://stream.tryphon.eu/live.mp3.m3u'" href="http://stream.tryphon.eu/live.mp3" title="Ecouter en direct"><strong>La Radio des jeux</strong><br/>en direct</a></div>
+
+      <div class="m3u">
+        <a href="http://stream.tryphon.eu/live.mp3.m3u">Ecouter avec votre lecteur</a>
+      </div>
+    </div>
+  </body>
+</html>

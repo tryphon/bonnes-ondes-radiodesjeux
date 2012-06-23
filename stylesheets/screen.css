@@ -226,3 +226,52 @@ body.episode #content #disqus_thread {
   margin-top: 12px;
   width: 253px;
 }
+
+
+
+
+body.stream .live {
+    width: 600px;
+}
+
+body.stream .live .twitter-box {
+  margin-top: 20px;
+}
+body.stream .live .twtr-widget {
+  clear: both;
+}
+
+body.stream .live .ui360 {
+    margin-left: 15px;
+}
+
+body.stream .live .ui360 a {
+    font-size: 1.2em;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: -25px;
+}
+
+body.stream .live .ui360 a strong {
+    font-size: 1.5em;
+    color: #87580A;
+    font-weight: bold;
+}
+
+body.stream .live .m3u {
+  text-align: center;
+  margin: 15px;
+}
+
+body.stream .live .m3u a {
+  color: #7D1B7F;
+  text-decoration: underline;
+  background: transparent url('../images/vlc.png') no-repeat scroll center left;
+  padding-left: 20px;
+}
+
+body.stream {
+    background: white;
+    height: 100%;
+}
