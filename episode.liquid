@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    {% include 'radiodesjeux/head' %}
+    {% include 'head' %}
     <title>{{ episode.title }} - {{show.name}} - Bonnes Ondes</title>
   </head>
 
   <body class="episode">
     <div id="page">
-      {% include 'radiodesjeux/header' %}
+      {% include 'header' %}
 
       <div id="content">
         <h2>{{episode.title}}</h2>
@@ -49,10 +49,10 @@
         {% endfor %}
         {% endunless %}
 
-        {% include 'radiodesjeux/sidebar' %}
+        {% include 'sidebar' %}
       </div>
 
-      {% include 'radiodesjeux/footer' %}
+      {% include 'footer' %}
     </div>
     </body>
 </html>
