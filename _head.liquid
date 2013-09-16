@@ -2,40 +2,6 @@
     <link href="{{theme.url_for_assets}}/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link rel="alternate" type="application/rss+xml" title="Podcast de {{show.name}}" href="{{show.url_for_podcast}}"/>
 
-    <script src="/javascripts/animator.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="/360-player/360player.css"/>
-    <link rel="stylesheet" type="text/css" href="/360-player/360player-visualization.css"/>
+    <script src="http://player.tryphon.eu/player.js"></script>
 
     <script src="{{theme.url_for_assets}}/javascripts/prototype.min.js"></script>
-
-    <script src="/javascripts/soundmanager2.js"></script>
-    <script src="/javascripts/360player.js"></script>
-    <script>
-      soundManager.url = "/flash/";
-
-      soundManager.useFastPolling = true; // increased JS callback frequency, combined with useHighPerformance = true
-
-      threeSixtyPlayer.config.loadRingColor = "#F3EBE0";
-
-      threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
-      threeSixtyPlayer.config.showHMSTime = true;
-
-      // enable some spectrum stuffs
-
-      threeSixtyPlayer.config.useWaveformData = true;
-      threeSixtyPlayer.config.useEQData = true;
-
-      // enable this in SM2 as well, as needed
-
-      if (threeSixtyPlayer.config.useWaveformData) {
-      soundManager.flash9Options.useWaveformData = true;
-      }
-      if (threeSixtyPlayer.config.useEQData) {
-      soundManager.flash9Options.useEQData = true;
-      }
-      if (threeSixtyPlayer.config.usePeakData) {
-      soundManager.flash9Options.usePeakData = true;
-      }
-      soundManager.debugMode = true;
-    </script>

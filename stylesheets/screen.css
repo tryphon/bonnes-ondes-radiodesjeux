@@ -227,8 +227,9 @@ body.episode #content #disqus_thread {
   width: 253px;
 }
 
-
-
+#sidebar .player .duration {
+    display:none;
+}
 
 body.stream .live {
     width: 600px;
